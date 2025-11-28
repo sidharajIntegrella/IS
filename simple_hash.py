@@ -1,6 +1,8 @@
 import pprint
 import time
 
+# explain birthday problem
+
 def tiny_hash(msg):
     h = 0
     for i in range(len(msg)):
@@ -83,11 +85,11 @@ def example_hash():
 def brute_force_example():
     charset = "1234567890abcdefghijklmnopqrstuvwxyz"
     # target = tiny_hash("12345")
-    # target = tiny_hash("12345678")
+    target = tiny_hash("12345678")
     # target = tiny_hash("hello")
     # target = tiny_hash("test@")
     # target = tiny_hash("hello1") # last test result : seconds 53.11 
-    target = tiny_hash("hellow") # last test result: closed the vscode
+    # target = tiny_hash("hellow") # last test result: closed the vscode
     # target = tiny_hash("A quick brown fox jumps over the lazy dog") # exponential time
     result = brute_force_tiny_hash(target, charset, 10)
     print("target hash:", target)
