@@ -1,4 +1,5 @@
 class RSA:
+    # selecting two prime numbers p and q
     def __init__(self,p=17,q=23):
         self.p = p
         self.q = q

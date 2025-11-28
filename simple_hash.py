@@ -6,7 +6,7 @@ import time
 def tiny_hash(msg):
     h = 0
     for i in range(len(msg)):
-        h = (h + ord(msg[i])) % 65536
+        h = (h + ord(msg[i])) % 65536 # 17-bit hash
     return h
 
 def verifyMessageHash(message, expectedHash) :
@@ -84,8 +84,8 @@ def example_hash():
 
 def brute_force_example():
     charset = "1234567890abcdefghijklmnopqrstuvwxyz"
-    # target = tiny_hash("12345")
-    target = tiny_hash("12345678")
+    target = tiny_hash("12345")
+    # target = tiny_hash("12345678")
     # target = tiny_hash("hello")
     # target = tiny_hash("test@")
     # target = tiny_hash("hello1") # last test result : seconds 53.11 
